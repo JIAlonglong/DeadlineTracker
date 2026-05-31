@@ -30,3 +30,4 @@ ENV/
 
 # App bundle
 DeadlineTracker.app/
+*.dmg
