@@ -15,8 +15,8 @@ def _default_config():
     return {
         "tracked": [],       # 用户添加的会议 [{name, deadline, note, synced}]
         "settings": {
-            "calendar_name": "默认",
-            "reminder_list": "提醒事项",
+            "calendar_name": "个人",
+            "reminder_list": "提醒",
             "alert_days_before": 30,
             "auto_sync": False,
         },

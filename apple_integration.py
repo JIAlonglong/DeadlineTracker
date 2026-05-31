@@ -155,7 +155,7 @@ end tell
         names = [n.strip() for n in result.stdout.strip().split(",")]
         return [n for n in names if n]
     except Exception:
-        return ["默认"]
+        return ["个人"]
 
 
 def get_reminder_lists() -> list:
@@ -179,7 +179,7 @@ end tell
         names = [n.strip() for n in result.stdout.strip().split(",")]
         return [n for n in names if n]
     except Exception:
-        return ["提醒事项"]
+        return ["提醒"]
 
 
 def _escape(s: str) -> str:

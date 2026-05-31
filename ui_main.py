@@ -326,7 +326,7 @@ class MainWindow(QMainWindow):
         try:
             self.combo_reminders.addItems(get_reminder_lists())
         except Exception:
-            self.combo_reminders.addItem("提醒事项")
+            self.combo_reminders.addItem("提醒")
         form.addRow("提醒列表:", self.combo_reminders)
 
         self.spin_alert = QSpinBox()
@@ -426,11 +426,11 @@ class MainWindow(QMainWindow):
         settings = self.config.get("settings", {})
         self.spin_alert.setValue(settings.get("alert_days_before", 30))
         self.chk_auto.setChecked(settings.get("auto_sync", False))
-        cal = settings.get("calendar_name", "默认")
+        cal = settings.get("calendar_name", "个人")
         idx = self.combo_calendar.findText(cal)
         if idx >= 0:
             self.combo_calendar.setCurrentIndex(idx)
-        rem = settings.get("reminder_list", "提醒事项")
+        rem = settings.get("reminder_list", "提醒")
         idx = self.combo_reminders.findText(rem)
         if idx >= 0:
             self.combo_reminders.setCurrentIndex(idx)
